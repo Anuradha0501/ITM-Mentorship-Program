@@ -11,12 +11,12 @@
  */
 bool has_cycle(SinglyLinkedListNode* head) {
     SinglyLinkedListNode *t = head;   // here t will point to head node
-SinglyLinkedListNode *r = head;
-if(head == NULL || head->next==NULL) // Condition 1
+    SinglyLinkedListNode *r = head;
+if(head == NULL || head->next==NULL) // Condition 1, if head is null of address of head is null means either their is only one node or no node
 {
     return false;
 }
-while( r!=NULL&&r->next!=NULL) // Condition 2
+while( r!=NULL&&r->next!=NULL) // Condition 2, if address of head is not null then traverse linked list and is t is equal to r then return true and stop program
 {
     t = t->next; // Tortoise node i.e. node which will remain at previous nodes
     r = r->next->next; // Hare node i.e. node which will move one node ahead of tortoise node
